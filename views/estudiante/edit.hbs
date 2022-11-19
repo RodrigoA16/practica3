@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editar Estudiante</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/estudiantes">Lista de Estudiantes</a></h3>
+            <h1>Editar Estudiante</h1>
+            <form action="/estudiantes/update/{{ estudiante._id }}" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Codigo</td>
+                            <td><input type="text" name="codigo" value="{{ estudiante.codigo }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Descripcion</td>
+                            <td><input type="text" name="nombre" value="{{ estudiante.nombre }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input type="text" name="email" value="{{ estudiante.email }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Facultad</td>
+                            <td><input type="text" name="facultad" value="{{ estudiante.facultad }}" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">Update</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<h1>{{title}}</h1>
+
+<h1> Estudiantes</h1>
+    <p >
+        <div class="container">
+            <h3><a href="/estudiantes/create">Crear Etudiante</a></h3>
+            <h1>Lista de Estudiantes</h1>
+            {{#if estudiantes }}
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Facultad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{# each estudiantes }}
+                        <tr>
+                            <td><a href="/estudiantes/show/{{ _id }}">{{ codigo }}</a></td>
+                            <td>{{ nombre }}</td>
+                            <td>{{ email }}</td>
+                            <td>{{ facultad }}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{~^~}}
+                <div>Estudiantes no encontrados.</div>
+            {{/if}}
+        </div>
+    </p>

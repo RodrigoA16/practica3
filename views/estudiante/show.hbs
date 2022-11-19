@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detalle de Estudiante</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/estudiantes">Lista de Estudiantes</a></h3>
+            <h1>Detalle de Estudiante</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Codigo</td>
+                        <td>{{ estudiante.codigo }}</td>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>{{ estudiante.nombre }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>{{ estudiante.email }}</td>
+                    </tr>
+                    <tr>
+                        <td>Facultad</td>
+                        <td>{{ estudiante.facultad }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3><a href="/estudiantes/edit/{{ estudiante._id }}">EDIT</a></h3>
+            <form action="/estudiantes/delete/{{ estudiante._id }}" method="post">
+                <button type="submit">DELETE</button>
+            </form>
+        </div>
+    </body>
+</html>
